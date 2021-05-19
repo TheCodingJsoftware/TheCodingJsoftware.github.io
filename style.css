@@ -21,7 +21,34 @@ body{
     line-height: 1.45;
     color: #eee;
     color: rgba(255, 255, 255, .85);
+    
 }
+.grid {
+    display: grid;
+    height: 100%;
+    /* background-color: lightgreen; */
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    /*grid-gap: 5px;*/
+    grid-auto-columns: 50%;
+    grid-auto-flow: row;
+  }
+  .item {
+    /* border: 1px solid; */
+    /* grid-area: span 1 / span 1; */
+  }
+/*   
+  .item:nth-child(odd) {
+    background-color: lightblue;
+  }
+  
+  .item:nth-child(even) {
+    background-color: lightslategray;
+  } */
+  
+  /* .item1 {
+    grid-area: span 1/ span 2;
+  } */
 #container {
     padding-top: 50px;
 }
@@ -42,7 +69,7 @@ h1 {
 }
 
 h3 {
-    font-size: 2.4em;
+    font-size: 1.4em;
     font-weight: 300;
     line-height: 1.5;
 }
@@ -80,14 +107,15 @@ ul {
 html {
     font-size: 62.5%;
 }
-
+/* 
 body {
-    font-size: 1em;
-}
+    font-size: auto;
+} */
 
 /* COMPUTER MODEL CODE */
 #stage {
-    width: 150px;
+    /* float: right; */
+    width: 175px;
     height: 150px;
     margin: 20px auto;
 }
@@ -106,12 +134,12 @@ body {
     -webkit-animation: turnComputer 10s linear infinite;
     animation: turnComputer 10s linear infinite;
 }
-
 #computer_render > div {
+    overflow:hidden;
+    clear:right; 
     position: absolute;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    float: left;
     overflow: hidden;
     opacity: 0.85;
 }
@@ -149,7 +177,6 @@ body {
     -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-22.5px) translateZ(75px);
     background-color: rgba(0, 162, 255, 0.3);
 }
-
 #top {
     width: 150px;
     height: 150px;
@@ -266,7 +293,6 @@ body {
     -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(37.5px) translateY(-97.5px) translateZ(45px);
     background-color: rgba(0, 162, 255, 0.3);
 }
-
 #moniter_top {
     width: 120px;
     height: 120px;
@@ -315,7 +341,7 @@ body {
     transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -webkit-transform: rotateX(-90deg) translateX(119.5px) translateY(-97.5px) translateZ(97.5px);
-    background-color: rgba(18, 5, 201, 0.3);
+    background-color: rgba(18, 5, 201, 0.5);
 }
 #moniter_front6 {
     width: 15px;
@@ -323,7 +349,7 @@ body {
     transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -webkit-transform: rotateX(-90deg) translateX(119.5px) translateY(-97.5px) translateZ(7.5px);
-    background-color: rgba(18, 5, 201, 0.3);
+    background-color: rgba(18, 5, 201, 0.5);
 }
 #moniter_front7 {
     width: 15px;
@@ -331,7 +357,7 @@ body {
     transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -webkit-transform: translateX(119.5px) translateY(30px) translateZ(120px);
-    background-color: rgba(18, 5, 201, 0.3);
+    background-color: rgba(18, 5, 201, 0.5);
 }
 #moniter_front8 {
     width: 15px;
@@ -339,7 +365,7 @@ body {
     transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -webkit-transform: translateX(119.5px) translateY(30px) translateZ(75px);
-    background-color: rgba(18, 5, 201, 0.3);
+    background-color: rgba(18, 5, 201, 0.5);
 }
 #moniter_screen {
     width: 90px;
@@ -347,38 +373,14 @@ body {
     transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
     -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-97.5px) translateZ(-75px);
-    background-color: rgba(10, 2, 131, 0.3);
+    background-color: rgba(5, 0, 79, 0.8);
 }
 /* FRONT OF SCREEN END */
 
 /* SCREEN END */
 
-/* 
-.front:before {
-    border-color: rgba(92, 92, 92, 0.3) transparent transparent transparent;
-}
 
-.back:before {
-    border-color: rgba(20, 90, 225, 0.3) transparent transparent transparent;
-}
-
-.left:before {
-    border-color: rgba(0, 142, 167, 0.3) transparent transparent transparent;
-}
-
-.right:before {
-    border-color: rgba(0, 255, 251, 0.3) transparent transparent transparent;
-}
-
-/* Base */
-.bottom:before {
-    border-color: rgba(140, 0, 255, 0.3) transparent transparent transparent;
-}
-.top:before {
-    border-color: rgba(140, 0, 255, 0.3) transparent transparent transparent;
-} */
-
-
+/* No idea what the below does, so just leave it please :) */
 @-webkit-keyframes turnComputer {
     100% {
         -webkit-transform: rotateX(75deg) rotate(425deg);
