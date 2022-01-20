@@ -1,4 +1,10 @@
 /* @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900); */
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+  font-family: 'Open Sans', 'sans-serif';
+}
 #top_image {
     background-color: #141414;
     background-image: url('thecodingjsoftwarelogoHD.png');
@@ -28,23 +34,33 @@ body{
     /* background-color: lightgreen; */
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 50%);
-    grid-gap: 5px;
-    grid-auto-columns: 50%;
+    grid-gap: 100px;
+    grid-auto-columns: 100%;
+    grid-auto-flow: row;
+  }
+  .button_grid {
+    display: grid;
+    /* height: 100%; */
+    /* background-color: lightgreen; */
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    grid-gap: 35px;
+    grid-auto-columns: 100%;
     grid-auto-flow: row;
   }
   .item {
     /* border: 1px solid; */
     /* grid-area: span 1 / span 1; */
   }
-/*   
+/*
   .item:nth-child(odd) {
     background-color: lightblue;
   }
-  
+
   .item:nth-child(even) {
     background-color: lightslategray;
   } */
-  
+
   /* .item1 {
     grid-area: span 1/ span 2;
   } */
@@ -131,7 +147,7 @@ html {
 }
 #computer_render > div {
     overflow:hidden;
-    clear:right; 
+    clear:right;
     position: absolute;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
@@ -458,4 +474,61 @@ html {
         transform: scale(0.85);
         margin-right: 120px;
     }
+}
+
+
+ul {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.download {
+  width: 200px;
+  height: 75px;
+  background: black;
+  float: left;
+  border-radius: 5px;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.download > .fa {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.df,
+.dfn {
+  position: absolute;
+  left: 70px;
+}
+
+.df {
+  top: 20px;
+  font-size: .68em;
+}
+
+.dfn {
+  top: 33px;
+  font-size: 1.08em;
+}
+
+.download:hover {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
