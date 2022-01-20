@@ -43,7 +43,7 @@ body{
     /* height: 100%; */
     /* background-color: lightgreen; */
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-rows: repeat(2, 25%);
     grid-gap: 35px;
     grid-auto-columns: 100%;
     grid-auto-flow: row;
