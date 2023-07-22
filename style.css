@@ -1,6 +1,12 @@
 /* global */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+
+@font-face {
+    font-family: "Varela Round";
+    src: url("Varela Round.ttf");
+}
 
 .grid-3 {
     display: grid;
@@ -10,12 +16,18 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Varela Round', 'Ionicons';
     background-color: #101214;
     color: #7A7C80;
     padding-left: 1%;
 }
-
+p{
+	font-family: 'Varela Round', 'Ionicons';
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+    font-size: 18px;
+}
 h2,
 .white {
     color: #fff;
@@ -28,7 +40,7 @@ a {
 
 /* section 1 */
 .section-1 {
-    padding-top: 30vh;
+    padding-top: 12vh;
     text-align: center;
 }
 
@@ -56,7 +68,7 @@ a {
 
 /* section 2 */
 .section-2 {
-    padding-top: 30vh;
+    padding-top: 4vh;
     width: 70%;
 }
 
@@ -92,7 +104,7 @@ a {
 /* section 3 */
 .section-3 {
     position: absolute;
-    bottom: 9vh;
+    bottom: 8vh;
     left: 0;
 }
 
@@ -160,6 +172,7 @@ a {
     .section-3 {
         right: 0;
         bottom: 0;
+        bottom: 8vh;
     }
 }
 
