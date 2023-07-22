@@ -78,7 +78,7 @@ a {
 }
 
 .section-2 p {
-    font-size: 1.1rem;
+    font-size: 1.01rem;
     padding-bottom: 10px;
     margin: 0;
 }
@@ -95,7 +95,7 @@ a {
 
 /* animations / utilities */
 .section-2 a:hover {
-    font-size: 1.21rem;
+    font-size: 1.01rem;
     color: #fff;
     cursor: pointer;
     transition: 0.2s;
@@ -129,7 +129,7 @@ a {
 
 /* animations / utilities */
 .section-3 a:hover {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #fff;
     cursor: pointer;
     transition: 0.2s;
