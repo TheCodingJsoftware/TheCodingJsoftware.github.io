@@ -28,7 +28,7 @@ body {
 }
 p{
 	font-family: 'Varela Round', 'Ionicons';
-    width: 70%;
+    /* width: 70%; */
     margin: auto;
     margin-top: 2%;
     font-size: 1rem;
@@ -90,6 +90,7 @@ a {
 
 .section-2 .name-and-icons {
     display: list-item;
+    margin-left: 25px;
 }
 
 .section-2 a {
