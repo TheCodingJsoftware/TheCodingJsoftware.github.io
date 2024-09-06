@@ -1,3 +1,9 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#0c0c0c",
+        "sideBarSectionHeader.background": "#111111",
+        "editor.background": "#121212",
+        "minimap.background": "#0c0c0c"
+    }
 }
