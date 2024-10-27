@@ -1,340 +1,145 @@
-
-/* COMPUTER MODEL CODE */
-#stage {
-    width: 50px;
-    height: 50px;
-    top: 150px;
-    position: absolute;
-    left: -37%;
-    transform: scale(0.3);
-    transition: transform 100ms ease-in-out;
-}
-#stage:hover{
-    transform: scale(0.4);
-    transition: transform 100ms ease-in-out;
-}
-/* media queres */
-@media(max-width:780px) {
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .section-1 {
-        padding: 0;
-        padding-top: 5rem;
-    }
-
-    .section-2 {
-        padding: 0;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
-    }
-    #stage {
-        margin-left: 40%;
-        transform: scale(0.3);
-    }
-    #stage:hover{
-        transform: scale(0.4);
-    }
+html,
+body,
+div,
+article,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+span,
+a,
+button,
+input,
+textarea,
+select,
+details,
+details[open],
+summary,
+footer,
+nav {
+    transition: background-color 0.3s ease-in-out, color 0.1s ease;
 }
 
+::selection {
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
 
-/* BASE */
-#computer_render {
-    /* background: white; */
-    width: 150px;
-    height: 150px;
-    margin: auto;
+::-moz-selection {
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+
+details {
     position: relative;
-
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: rotateX(75deg) rotate(65deg);
-    transform: rotateX(75deg) rotate(65deg);
-    -webkit-animation: turnComputer 10s linear infinite;
-    animation: turnComputer 10s linear infinite;
-}
-
-#computer_render>div {
+    width: auto;
+    height: auto;
     overflow: hidden;
-    clear: right;
-    position: absolute;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-    opacity: 0.85;
+    background-color: var(--surface-container-low);
+    box-shadow: var(--elevate1);
+    padding: 5px;
+    border-radius: 0.45rem;
+    margin: 5px;
 }
 
-/* BASE START */
-#right {
-    width: 150px;
-    height: 45px;
-    transform: rotateX(90deg) translateY(22.5px) translateZ(22.5px);
-    -moz-transform: rotateX(90deg) translateY(22.5px) translateZ(22.5px);
-    -webkit-transform: rotateX(90deg) translateY(22.5px) translateZ(22.5px);
-    background-color: rgba(79, 79, 74, 0.3);
+details:not([open]) summary button{
+    color: var(--on-surface);
 }
 
-#left {
-    width: 150px;
-    height: 45px;
-    transform: rotateX(-90deg) translateY(-22.5px) translateZ(127.5px);
-    -moz-transform: rotateX(-90deg) translateY(-22.5px) translateZ(127.5px);
-    -webkit-transform: rotateX(-90deg) translateY(-22.5px) translateZ(127.5px);
-    background-color: rgba(79, 79, 74, 0.3);
+details:not([open]) summary p{
+    color: var(--on-surface);
 }
 
-#front {
-    width: 150px;
-    height: 45px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-22.5px) translateZ(-75px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-22.5px) translateZ(-75px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-22.5px) translateZ(-75px);
-    background-color: rgba(79, 79, 74, 0.3);
+details:not([open]) summary i{
+    color: var(--on-surface);
 }
 
-#back {
-    width: 150px;
-    height: 45px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-22.5px) translateZ(75px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-22.5px) translateZ(75px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-22.5px) translateZ(75px);
-    background-color: rgba(79, 79, 74, 0.3);
+details:not([open]) summary h6{
+    color: var(--on-surface);
 }
 
-#top {
-    width: 150px;
-    height: 150px;
-    transform: translateX(0px) translateY(0px) translateZ(45px);
-    -moz-transform: translateX(0px) translateY(0px) translateZ(45px);
-    -webkit-transform: translateX(0px) translateY(0px) translateZ(45px);
-    background-color: rgba(109, 109, 103, 0.3);
+details[open] summary button{
+    color: var(--surface);
+}
+details[open] summary p{
+    color: var(--on-surface);
+}
+details[open] summary i{
+    color: var(--on-surface);
+}
+details[open] summary h6{
+    color: var(--on-surface);
 }
 
-#bottom {
-    width: 150px;
-    height: 150px;
-    transform: translateX(0px) translateY(0px);
-    -moz-transform: translateX(0px) translateY(0px);
-    -webkit-transform: translateX(0px) translateY(0px);
-    background-color: rgba(56, 56, 53, 0.3);
+details[open] {
+    height: auto;
+    max-height: 99em !important;
+    border: 0.0625rem solid var(--primary) !important;
+    background-color: var(--surface);
 }
 
-/* BASE END */
 
-/* MONITER STAND START */
-#moniter_stand_right {
-    width: 90px;
-    height: 15px;
-    transform: rotateX(90deg) translateX(30px) translateY(53px) translateZ(-22.5px);
-    -moz-transform: rotateX(90deg) translateX(30px) translateY(53px) translateZ(-22.5px);
-    -webkit-transform: rotateX(90deg) translateX(30px) translateY(53px) translateZ(-22.5px);
-    background-color: rgba(109, 109, 103, 0.3);
+span.highlight {
+    color: var(--on-primary) !important;
+    background-color: var(--primary) !important;
+    border-radius: 4px;
+    padding-left: 1px;
+    padding-right: 1px;
+    display: inline-block !important;
 }
 
-#moniter_stand_left {
-    width: 90px;
-    height: 15px;
-    transform: rotateX(-90deg) translateX(30px) translateY(-53px) translateZ(112.5px);
-    -moz-transform: rotateX(-90deg) translateX(30px) translateY(-53px) translateZ(112.5px);
-    -webkit-transform: rotateX(-90deg) translateX(30px) translateY(-53px) translateZ(112.5px);
-    background-color: rgba(109, 109, 103, 0.3);
+.hidden{
+    display: none !important;
 }
 
-#moniter_stand_front {
-    width: 90px;
-    height: 15px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-53px) translateZ(-75px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-53px) translateZ(-75px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-53px) translateZ(-75px);
-    background-color: rgba(109, 109, 103, 0.3);
+dialog p{
+    line-height: normal;
 }
 
-#moniter_stand_back {
-    width: 90px;
-    height: 15px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-53px) translateZ(15px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-53px) translateZ(15px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-53px) translateZ(15px);
-    background-color: rgba(109, 109, 103, 0.3);
+#content{
+    max-height: calc(100vh - 300px);
 }
 
-/* MONITER STAND END */
-
-/* SCREEN BASE START */
-#moniter_base_right {
-    width: 15px;
-    height: 120px;
-    transform: translateX(0px) translateY(0px);
-    -moz-transform: translateX(0px) translateY(0px);
-    -webkit-transform: translateX(15px) translateY(15px) translateZ(60px);
-    background-color: rgba(109, 109, 103, 0.3);
+article div{
+    height: 100%;
 }
 
-#moniter_base_left {
-    width: 15px;
-    height: 120px;
-    transform: translateX(0px) translateY(0px);
-    -moz-transform: translateX(0px) translateY(0px);
-    -webkit-transform: translateX(120px) translateY(15px) translateZ(60px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_base_front {
-    width: 90px;
-    height: 15px;
-    transform: translateX(0px) translateY(0px);
-    -moz-transform: translateX(0px) translateY(0px);
-    -webkit-transform: translateX(30px) translateY(15px) translateZ(60px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_base_back {
-    width: 90px;
-    height: 15px;
-    transform: translateX(0px) translateY(0px);
-    -moz-transform: translateX(0px) translateY(0px);
-    -webkit-transform: translateX(30px) translateY(120px) translateZ(60px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-/* SCREEN BASE END */
-
-/* SCREEN START */
-
-#moniter_right {
-    width: 120px;
-    height: 75px;
-    transform: rotateX(90deg) translateX(15px) translateY(97.5px) translateZ(-97.5px);
-    -moz-transform: rotateX(90deg) translateX(15px) translateY(97.5px) translateZ(-97.5px);
-    -webkit-transform: rotateX(90deg) translateX(15px) translateY(97.5px) translateZ(-97.5px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_left {
-    width: 120px;
-    height: 75px;
-    transform: rotateX(-90deg) translateX(15px) translateY(-97.5px) translateZ(-22.5px);
-    -moz-transform: rotateX(-90deg) translateX(15px) translateY(-97.5px) translateZ(-22.5px);
-    -webkit-transform: rotateX(-90deg) translateX(15px) translateY(-97.5px) translateZ(-22.5px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_back {
-    width: 120px;
-    height: 75px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(37.5px) translateY(-97.5px) translateZ(15px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(37.5px) translateY(-97.5px) translateZ(15px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(37.5px) translateY(-97.5px) translateZ(45px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_top {
-    width: 120px;
-    height: 120px;
-    transform: translateX(15px) translateY(15px) translateZ(135px);
-    -moz-transform: translateX(15px) translateY(15px) translateZ(135px);
-    -webkit-transform: translateX(15px) translateY(15px) translateZ(135px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-/* FRONT OF SCREEN START*/
-
-#moniter_front1 {
-    width: 120px;
-    height: 15px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-67.5px) translateZ(-75px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-67.5px) translateZ(-75px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-67.5px) translateZ(-75px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_front2 {
-    width: 120px;
-    height: 15px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-127.5px) translateZ(-75px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-127.5px) translateZ(-75px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(67.5px) translateY(-127.5px) translateZ(-75px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_front3 {
-    width: 15px;
-    height: 45px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_front4 {
-    width: 15px;
-    height: 45px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(105px) translateY(-97.5px) translateZ(-127.5px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_front5 {
-    width: 15px;
-    height: 45px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -webkit-transform: rotateX(-90deg) translateX(119.5px) translateY(-97.5px) translateZ(97.5px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_front6 {
-    width: 15px;
-    height: 45px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -webkit-transform: rotateX(-90deg) translateX(119.5px) translateY(-97.5px) translateZ(7.5px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_front7 {
-    width: 15px;
-    height: 90px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -webkit-transform: translateX(119.5px) translateY(30px) translateZ(120px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_front8 {
-    width: 15px;
-    height: 90px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -webkit-transform: translateX(119.5px) translateY(30px) translateZ(75px);
-    background-color: rgba(109, 109, 103, 0.3);
-}
-
-#moniter_screen {
-    width: 90px;
-    height: 45px;
-    transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateX(0px) translateY(-97.5px) translateZ(-127.5px);
-    -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateX(52.5px) translateY(-97.5px) translateZ(-75px);
-    background-color: rgba(0, 0, 0, 0.646);
-}
-
-/* FRONT OF SCREEN END */
-
-/* SCREEN END */
-
-
-/* No idea what the below does, so just leave it please :) */
-@-webkit-keyframes turnComputer {
-    100% {
-        -webkit-transform: rotateX(75deg) rotate(425deg);
+/* WHen movile use max heihgt */
+@media screen and (max-width: 600px) {
+    #content{
+        max-height: 500px;
     }
 }
 
-@keyframes turnComputer {
-    100% {
-        transform: rotateX(75deg) rotate(425deg);
-    }
+.row {
+    display: flex;
+    align-items: stretch;
+}
+
+.l,
+.max {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.l article,
+.max article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+h4 {
+    display: block !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.9rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
