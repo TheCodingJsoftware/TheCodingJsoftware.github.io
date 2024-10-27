@@ -105,17 +105,6 @@ dialog p{
     max-height: calc(100vh - 300px);
 }
 
-article div{
-    height: 100%;
-}
-
-/* WHen movile use max heihgt */
-@media screen and (max-width: 600px) {
-    #content{
-        max-height: 500px;
-    }
-}
-
 .row {
     display: flex;
     align-items: stretch;
@@ -134,12 +123,4 @@ article div{
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-}
-
-h4 {
-    display: block !important;
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.9rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
 }
